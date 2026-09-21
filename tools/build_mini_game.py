@@ -409,7 +409,7 @@ def build_answer(out: Path, site: str):
 
 if __name__ == "__main__":
     site = sys.argv[1] if len(sys.argv) > 1 else SITE
-    out = Path(__file__).resolve().parent.parent / "site" / "files"
+    out = Path(__file__).resolve().parent.parent / "docs" / "files"
     out.mkdir(parents=True, exist_ok=True)
     a = build_game(out / "the-wet-half-hour.pdf", site)
     b = build_answer(out / "the-wet-half-hour-answer.pdf", site)

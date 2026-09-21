@@ -7,7 +7,7 @@ import sys
 import urllib.request
 from pathlib import Path
 
-SITE = Path(__file__).resolve().parent.parent / "site"
+SITE = Path(__file__).resolve().parent.parent / "docs"
 fails, warns = [], []
 
 

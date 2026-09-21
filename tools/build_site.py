@@ -13,7 +13,7 @@ from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / "site"
+OUT = ROOT / "docs"
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 BASE = "https://musolanto-hash.github.io/a-maison-soiree-guides"

@@ -56,6 +56,6 @@ sh.commit()
 txt(W / 2, 452, "Murder mysteries \u00b7 advent calendars \u00b7 mahjong", "sans", 22, _c(214, 205, 188), "c")
 txt(W / 2, 508, "and a free four-player mystery to print", "gara_i", 26, GOLD_LIGHT, "c")
 
-out = Path(__file__).resolve().parent.parent / "site" / "og.png"
+out = Path(__file__).resolve().parent.parent / "docs" / "og.png"
 p.get_pixmap(dpi=72, alpha=False).save(str(out))
 print(out, out.stat().st_size, "bytes")

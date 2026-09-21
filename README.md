@@ -26,7 +26,7 @@ redirected. Nothing here depends on Pages specifically.
 ## Layout
 
 ```
-site/                     everything that is published (Pages serves this folder)
+docs/                     everything that is published (Pages serves this folder)
   index.html              homepage
   guides.html             index of the ten guides
   free-murder-mystery-game.html   the lead magnet landing page
