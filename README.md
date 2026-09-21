@@ -67,11 +67,27 @@ a sitemap that does not match the files on disk.
   real questions, `WebSite` + `Organization` on the homepage.
 * Mobile-first: 43rem measure, tables wrapped in horizontal scroll containers, nothing with a
   minimum width wider than a phone.
-* `robots.txt` lives at `/a-maison-soiree-guides/robots.txt`. On a GitHub project page that is **not**
-  the host root, so crawlers will not read it; the host root returns 404, which crawlers treat as
-  allow-all. The sitemap is therefore submitted directly rather than relying on discovery.
-* IndexNow uses `keyLocation` for the same reason: the key file sits inside this project's path,
-  which is a valid parent directory of every URL submitted.
+* A project page cannot serve the host root, so `robots.txt` and the IndexNow key also live in a
+  second tiny repo, `musolanto-hash/musolanto-hash.github.io`, which publishes
+  <https://musolanto-hash.github.io/robots.txt> pointing at this sitemap. A copy of both stays in
+  `docs/` as well, and IndexNow is submitted with `keyLocation` so either copy satisfies it.
+
+## Indexing, and what actually still works
+
+Run `python tools/submit.py`. Results as of 21 September 2026:
+
+| Endpoint | Result |
+|---|---|
+| `google.com/ping?sitemap=` | **HTTP 404** — Google retired sitemap ping in June 2023 and the endpoint now serves a deprecation notice |
+| `bing.com/ping?sitemap=` | **HTTP 410 Gone** — also retired |
+| `api.indexnow.org/IndexNow` | **HTTP 200**, all 13 URLs accepted |
+| `bing.com/indexnow` | **HTTP 200**, all 13 URLs accepted |
+
+So IndexNow (Bing, Yandex, Seznam, Naver) is the only push channel that still exists without an
+account. **Google now has no account-free submission route at all**: discovery there depends on the
+host-root `robots.txt` above, the sitemap it points to, and inbound links. If the shop owner ever
+verifies the property in Google Search Console, the sitemap can be submitted there directly, which
+is the only thing that would speed it up.
 
 ## The free game
 
