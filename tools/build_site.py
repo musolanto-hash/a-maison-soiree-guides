@@ -95,6 +95,7 @@ def head(p):
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title}</title>
 <meta name="description" content="{desc}">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%274%27 fill=%27%230a2820%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-family=%27Georgia,serif%27 font-size=%2716%27 font-weight=%27bold%27 fill=%27%23c9a961%27 text-anchor=%27middle%27%3EA%3C/text%3E%3C/svg%3E">
 <link rel="canonical" href="{url}">
 <meta property="og:type" content="{p.get('og_type', 'article')}">
 <meta property="og:title" content="{title}">

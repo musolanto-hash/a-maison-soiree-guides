@@ -55,7 +55,7 @@ def local():
         if name not in ("index.html", "guides.html") and not 900 <= words <= 1700:
             warns.append(f"{name}: {words} words")
         for h in hrefs:
-            if h.startswith(("http://", "https://", "mailto:")):
+            if h.startswith(("http://", "https://", "mailto:", "data:")):
                 continue
             if not (SITE / h).exists():
                 fail(name, f"broken internal link -> {h}")
@@ -78,7 +78,7 @@ def live(base):
         words, hrefs = check_html(u.rsplit("/", 1)[-1], text)
         print(f"  {code} {words:5d}w  {u}")
         for h in hrefs:
-            if h.startswith(("http://", "https://", "mailto:")):
+            if h.startswith(("http://", "https://", "mailto:", "data:")):
                 continue
             tgt = base + "/" + h
             try:
