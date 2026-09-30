@@ -17,9 +17,10 @@ COVER = [
           "One of the four of you killed Edmund Rook, and none of you knows which."),
     ("rule",),
     ("h", "What you need"),
-    ("p", "A printer, a pair of scissors, four pencils and four people. Print pages 4 and 5 "
-          "and cut out the four cards. Print the rest and keep it in three piles. That is the whole setup, "
-          "and it takes about ten minutes."),
+    ("p", "A printer, a pair of scissors, four pencils and four people. Print the whole file. Two of the "
+          "pages hold the four suspect cards, two to a page, with a dashed “cut here” line across "
+          "the middle: cut those into four. Keep the rest in three piles. That is the whole setup, and it "
+          "takes about ten minutes."),
     ("h", "The five rules this game is built on"),
     ("li", "Nothing is memorised. Your card is a reference sheet you read off when somebody asks you something."),
     ("li", "Nothing is read aloud in character. No accents, no costumes, no acting, anywhere."),
@@ -47,12 +48,12 @@ HOWTO = [
     ("h", "How the evening runs"),
     ("li", "Deal the four cards face down and take one each without choosing. Read your own card. "
            "Do not read anybody else's, and do not hand it over."),
-    ("li", "ROUND ONE (12 minutes). Put out documents C‑1, C‑2 and C‑3. Read them out loud, or pass them round. "
+    ("li", "ROUND ONE (12 minutes). Put out documents C-1, C-2 and C-3. Read them out loud, or pass them round. "
            "Then ask each other questions. You answer from your card. If the card does not cover it, the honest "
            "answer is “I don't remember”, and that is a legal answer printed on all four cards."),
-    ("li", "ROUND TWO (15 minutes). Put out C‑4 to C‑9. These are the papers. This is the round where the "
+    ("li", "ROUND TWO (15 minutes). Put out C-4 to C-9. These are the papers. This is the round where the "
            "why arrives, and it is the longest one."),
-    ("li", "ROUND THREE (10 minutes). Put out C‑10 and C‑11. These are the measurements. If your table has been "
+    ("li", "ROUND THREE (10 minutes). Put out C-10 and C-11. These are the measurements. If your table has been "
            "arguing well, this round ends the argument."),
     ("li", "THE BALLOT (5 minutes). Everyone fills in an accusation slip, including the person they think it is, "
            "and the one fact they would hang it on. Fold them. Then, and only then, open THE ANSWER."),
@@ -71,11 +72,12 @@ HOST = [
     ("h", "Printing"),
     ("li", "Print at 100% “Actual size”, not “fit to page”. Every page in this file is laid out to fall inside "
            "both US Letter and A4 without scaling."),
-    ("li", "Pages 4 and 5 are the four cards, two to a page. Cut along the dashed line."),
+    ("li", "The two pages marked “cut here” are the four suspect cards, two to a page. "
+           "Cut along the dashed line."),
     ("li", "Everything prints legibly in black and white on the cheapest paper in the house. Nothing in this file "
-           "is set smaller than 10 point and no text sits on top of a picture."),
+           "is set smaller than 11 point and no text sits on top of a picture."),
     ("h", "Setting up, ten minutes"),
-    ("li", "Make three piles: C‑1 to C‑3, C‑4 to C‑9, C‑10 and C‑11. Put the second and third out of sight."),
+    ("li", "Make three piles: C-1 to C-3, C-4 to C-9, C-10 and C-11. Put the second and third out of sight."),
     ("li", "Four accusation slips and four pencils on the table."),
     ("li", "Put the sheet marked WHAT WE KNOW in the middle where everyone can write on it."),
     ("li", "Set a phone alarm for 12, then 15, then 10 minutes. The alarms run the evening, not you."),

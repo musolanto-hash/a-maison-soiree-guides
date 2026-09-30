@@ -83,11 +83,13 @@ NAV = [("index.html", "Home"),
 
 
 def head(p):
-    url = f"{BASE}/{p['slug']}"
+    url = f"{BASE}/{p.get('url', p['slug'])}"
     desc = html.escape(p["desc"], quote=True)
     title = html.escape(p["meta_title"], quote=True)
     ld = p["ld"]
-    nav = "".join(f'<a href="{s}">{html.escape(t)}</a>' for s, t in NAV)
+    pre = f"{BASE}/" if p.get("abs_nav") else ""     # pages in a subfolder link back absolutely
+    nav = "".join(f'<a href="{pre}{s}">{html.escape(t)}</a>' for s, t in NAV)
+    robots = '<meta name="robots" content="noindex,follow">\n' if p.get("noindex") else ""
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -95,6 +97,7 @@ def head(p):
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title}</title>
 <meta name="description" content="{desc}">
+{robots}
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%274%27 fill=%27%230a2820%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-family=%27Georgia,serif%27 font-size=%2716%27 font-weight=%27bold%27 fill=%27%23c9a961%27 text-anchor=%27middle%27%3EA%3C/text%3E%3C/svg%3E">
 <link rel="canonical" href="{url}">
 <meta property="og:type" content="{p.get('og_type', 'article')}">
@@ -191,12 +194,15 @@ def build(pages):
         body = p["body"]
         if p["slug"] not in ("index.html", "guides.html"):
             body += related_block(p, pages)
+        (OUT / p["slug"]).parent.mkdir(parents=True, exist_ok=True)
         (OUT / p["slug"]).write_text(head(p) + body + FOOTER, encoding="utf-8")
 
     urls = []
     for p in pages:
+        if p.get("noindex"):          # the thank-you page is for buyers, not for search engines
+            continue
         pri = "1.0" if p["slug"] == "index.html" else ("0.9" if p.get("hub") else "0.8")
-        urls.append(f"  <url>\n    <loc>{BASE}/{p['slug']}</loc>\n"
+        urls.append(f"  <url>\n    <loc>{BASE}/{p.get('url', p['slug'])}</loc>\n"
                     f"    <lastmod>{TODAY}</lastmod>\n"
                     f"    <changefreq>monthly</changefreq>\n    <priority>{pri}</priority>\n  </url>")
     sitemap = ('<?xml version="1.0" encoding="UTF-8"?>\n'

@@ -23,7 +23,7 @@ open.</p>
 <p>Four people were in the building or the yard. All four of them are sitting at your table.</p>
 
 <div class="box">
-<p><strong>Download the game</strong> &mdash; 20 pages, and the answer is not in it.</p>
+<p><strong>Download the game</strong> &mdash; 21 pages, and the answer is not in it.</p>
 <p><a class="cta" href="files/the-wet-half-hour-USLetter.pdf">The game &middot; US Letter (PDF)</a>
 <a class="cta" href="files/the-wet-half-hour-A4.pdf">The game &middot; A4 (PDF)</a></p>
 <p><strong>Download the sealed answer</strong> &mdash; a separate file, behind a full-page STOP card.
@@ -189,3 +189,50 @@ listings.</p>
 <a href="{SHOP}">the A Maison Soir&eacute;e shop</a>. Nothing is sold on this site.</p>
 """ % GUIDE_LIST
 HOME = HOME.replace("{SHOP}", SHOP)
+
+GIFT = """
+<h1>A letter from Wren&#39;s Hollow, and a game to go with it</h1>
+<p class="lede">Thank you for buying one of our games. This is a second, complete game, free, with a
+letter from the constable of Wren&#39;s Hollow on the front of it.</p>
+
+<p>It is not a sample or a teaser. <em>The Wet Half-Hour</em> is a whole four-player murder mystery:
+four suspect cards, eleven printed case documents, a guest sheet, a host sheet, accusation slips and
+a sheet for the table to fill in together. It takes about forty-five minutes and roughly ten minutes
+to print and cut. Nothing is memorised, nothing is read aloud in character, nobody lies, and nobody
+knows they are the culprit &mdash; including the culprit.</p>
+
+<h2>What is in the file</h2>
+<ul>
+<li><strong>Page 1</strong> &mdash; a letter from Constable Dorothea Pruett, on her own notepaper.</li>
+<li><strong>Pages 2&ndash;22</strong> &mdash; the whole game, in the order you print it.</li>
+</ul>
+<p>The answer is <strong>not</strong> in that file. It lives in a second file, behind a full-page STOP
+card, so whoever does the printing can sit down and play like everybody else.</p>
+
+<div class="box">
+<p><strong>The gift</strong> &mdash; the letter and the whole game, 22 pages.</p>
+<p><a class="cta" href="thank-you-gift-USLetter.pdf">Letter &amp; game &middot; US Letter (PDF)</a>
+<a class="cta" href="thank-you-gift-A4.pdf">Letter &amp; game &middot; A4 (PDF)</a></p>
+<p><strong>The sealed answer</strong> &mdash; print it without reading it and put it face down.</p>
+<p><a class="cta alt" href="../files/the-wet-half-hour-answer-USLetter.pdf">The answer &middot; US Letter</a>
+<a class="cta alt" href="../files/the-wet-half-hour-answer-A4.pdf">The answer &middot; A4</a></p>
+</div>
+
+<h2>Printing it</h2>
+<ul>
+<li>Print at 100% &ldquo;Actual size&rdquo;, not &ldquo;fit to page&rdquo;. Both files are laid out to
+fall inside US Letter and A4 without scaling.</li>
+<li>Two pages hold the four suspect cards, two to a page, with a dashed &ldquo;cut here&rdquo; line
+across the middle. Cut those into four.</li>
+<li>Everything prints legibly in black and white on ordinary paper. Nothing is set below 11 point.</li>
+<li>Print the answer file last, and do not read it.</li>
+</ul>
+
+<h2>Playing it with three, or five</h2>
+<p>At three, leave out Dr Quill&#39;s card and read it aloud as a written statement instead &mdash;
+everything on it also appears on one of the documents. At five, the fifth person keeps the time,
+collects the accusation slips and reads out the answer at the end, which is the best job at the table.</p>
+
+<p>It is free for personal use. Please don&#39;t resell it or put it behind a paywall. If you play it
+and something in it does not work, we would rather know.</p>
+"""

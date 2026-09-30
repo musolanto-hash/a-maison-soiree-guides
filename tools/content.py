@@ -304,4 +304,13 @@ PAGES = [
                "table.")],
          body=J.NIGHT,
          related=["american-mahjong-for-beginners.html", "how-to-read-a-mahjong-card.html"]),
+
+    dict(slug="gift/index.html", url="gift/", abs_nav=True, noindex=True,
+         h1="A letter from Wren's Hollow, and a game to go with it",
+         meta_title="A thank-you from A Maison Soirée",
+         desc="A thank-you for buying one of our games: a complete free four-player murder mystery, "
+              "with a letter from the constable of Wren's Hollow on the front of it.",
+         targets=[],
+         body=H.GIFT),
+
 ]
